@@ -1,3 +1,7 @@
+
+// recursive method...
+
+
 #include<iostream>
 using namespace std;
 class node{
