@@ -57,7 +57,7 @@ node* evenafterodd(node* &head){
     }
     odd->next=evenstart;
     if(odd->next!=NULL){
-        even->next=NULL;
+        even->next==NULL;
     }
 }
 
