@@ -21,7 +21,7 @@ int prec(char c){
         return -1;
     }
 }
-string infixtoprefix(string s){
+string infixtopostfix(string s){
     stack<char> st;
     string res;
     for(int i=0;i<s.length();i++){
@@ -57,6 +57,6 @@ string infixtoprefix(string s){
 }
 int main()
 {
-    cout<<infixtoprefix("(a-b/c)*(a/k-l)")<<endl;
+    cout<<infixtopostfix("(a-b/c)*(a/k-l)")<<endl;
     return 0;
 }
