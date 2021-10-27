@@ -7,7 +7,7 @@
 
 using namespace std;
 int factor(int n){
-    for(int i=1;i<n;i++){
+    for(int i=1;i<=n;i++){
         if(n%i==0){
             cout<<i<<" ";
         }
@@ -31,7 +31,7 @@ int main()
 #include<math.h>
 using namespace std;
 int factor(int n){
-    for(int i=1;i<sqrt(n);i++){
+    for(int i=1;i<=sqrt(n);i++){
         if(n%i==0){
             if(n/i==i){
                 cout<<i<<endl;
