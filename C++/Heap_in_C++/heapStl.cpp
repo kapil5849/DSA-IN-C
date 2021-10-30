@@ -13,10 +13,10 @@ using namespace std;
 #include<stack>
 #include<string>
 
-#define vi vectro<int>
+#define vi vector<int>
 #define pii pair<int,int>
 #define vii vector<pii>
-#define rep (i,a,b) for(int i=0;i<b;i++)
+#define rep(i,a,b) for(int i=0;i<b;i++)
 #define ff first
 #define ss second
 #define setBits(x) builtin_popcount(x)
