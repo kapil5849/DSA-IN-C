@@ -1,5 +1,5 @@
-# DSA-IN-C++
-data structure and algorithm
+## DSA-IN-C++
+- data structure and algorithm
 
 
 [learning Source-1-APNA COLLEGE](https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ)
