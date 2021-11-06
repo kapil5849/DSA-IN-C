@@ -22,6 +22,6 @@ int main ()
     int wt[]={10,20,30};
     int value[]={100,50,150};
     int W=50;
-    cout<<knapsack(wt,value,3,W)<<endl;
+    cout<<knapsack(value,wt,3,W)<<endl;
   return 0;
 }
