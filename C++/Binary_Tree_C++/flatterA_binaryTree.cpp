@@ -52,8 +52,10 @@ int main(){
     root->left->right=new Node(5);
     root->right->left=new Node(6);
     root->right->right=new Node(7);
+    inorderprint(root); // inorder before my flattern...
+    cout<<endl;
     flatten(root);
-    inorderprint(root);
+    inorderprint(root); // inorder after my flattern...
     cout<<endl;
     return 0;
 }
