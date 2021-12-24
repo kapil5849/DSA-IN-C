@@ -2,6 +2,14 @@
 
 // frog 2 problem from coding minute...
 
+// input...
+// 4 ->n
+// 2 ->k
+// 10 30 40 20 ->h[]
+
+// output: 30 -> maximum in dp[]=ans...
+// 0 20 30 30 -> dp[]
+
 // bottom up...
 
 #include <bits/stdc++.h>
@@ -67,6 +75,39 @@ int main() {
 
 
 // top up...
+
+#include <bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+const int N=1e5;
+int h[N],memo[N];
+int n,k;
+int frog(int n){
+    if(n==0){
+        return 0;
+    }
+    int &ans=memo[n];
+    if(ans!=-1){
+        return ans;
+    }
+    ans=frog(n-1)+abs(h[n-1]-h[n]);
+    for(int kk=0;kk<=k and n-kk>=0;kk++){
+        if(n-2>=0){
+        ans=min(ans,frog(n-kk)+abs(h[n-kk]-h[n]));
+    }
+    }
+    return ans;
+}
+int main() {
+    cin>>n>>k;
+    for(int i=0;i<n;i++){
+        cin>>h[i];
+    }
+    memset(memo,-1,sizeof(memo));
+    cout<<frog(n-1);
+    return 0;
+}
+
 
 
 
