@@ -13,19 +13,21 @@ using namespace std;
          this->wt = wt;
       }
    };
-   void printAllPath(vector<Edge> graph[],int src,int dest,vector<bool> visited,string psf){
-   if(src==dest){
-      cout<<psf<<endl;
-      return;
-   }
-   visited[src]=true;
-   for(Edge edge:graph[src]){
-      if(visited[edge.nbr]==false){
-         printAllPath(graph,edge.nbr,dest,visited,psf+to_string(edge.nbr));
+   void printAllPath(vector<Edge> graph[],int src,int dest,vector<bool> visited,string ans){
+      if(src==dest){ // base case...
+         cout<<ans<<endl;
+         return;
       }
+      visited[src]=true; // mark visited...
+      for(Edge edge:graph[src]){ // call in neighber...
+         if(visited[edge.nbr]==false){ // check neighber...
+            printAllPath(graph,edge.nbr,dest,visited,ans+to_string(edge.nbr)); // call recursive function...
+         }
+      }
+      visited[src]=false; // because it give us all possible path -->> see example...
    }
-   visited[src]=false;
-}
+   
+   
    int main(){
       int vtces;
       cin>>vtces;
@@ -46,9 +48,11 @@ using namespace std;
       cin>>src;
       int dest;
       cin>>dest;
-      vector<bool> visited(vtces,false);
-      printAllPath(graph,src,dest,visited,to_string(src)+"");
+      vector<bool> visited(vtces,false); // visited arraylist...
+      printAllPath(graph,src,dest,visited,to_string(src)+""); // in starting print source + empty stirng...
       return 0;
+      // write your code here
+      
     }
 
 
